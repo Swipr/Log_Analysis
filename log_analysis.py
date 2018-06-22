@@ -9,12 +9,16 @@ def main():
     db = psycopg2.connect(dbname=DBNAME)
     c = db.cursor()
 
+    '''Execute/load the view statements.'''
+    create_views = open("create_views.sql").read()
+    c.execute(create_views)
+
     '''Return the three most popular articles of all time.'''
 
     pop_articles = '''
             select articles.title, count(log.path) as views
             from articles, log
-            where articles.slug = any(string_to_array(log.path, '/'))
+            where log.path = concat('/article/', articles.slug)
             group by articles.title
             order by views desc
             limit 3;
@@ -30,7 +34,7 @@ def main():
     pop_authors = '''
             select authors.name, count(log.path) as views
             from articles, log, authors
-            where articles.slug = any(string_to_array(log.path, '/'))
+            where log.path = concat('/article/', articles.slug)
              and articles.author = authors.id
             group by authors.name
             order by views desc;
