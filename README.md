@@ -1,6 +1,6 @@
 
 # Description
----
+
 &nbsp;
 
 ### Log analysis.
@@ -10,16 +10,17 @@
 
 
 ## Dependencies
----
+
 &nbsp;
 
 | Python3 | PostgreSql | Psycopg2 | Vagrant | VirtualBox |
 |:------------:|:------------:|:------------:| :------------:|:------------:|
 | [Python 3.5.2](https://www.python.org/downloads/) | [PostgreSql 9.5.13](https://www.postgresql.org) | [Psycopg2 2.7.5](http://initd.org/psycopg/download/) | [Vagrant 2.1.1](https://www.vagrantup.com/) | [VirtualBox 5.2](https://www.virtualbox.org/) |
+
 &nbsp;
 
 ## How-to
----
+
 &nbsp;
 
 
