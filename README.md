@@ -4,6 +4,10 @@
 &nbsp;
 
 ### Log analysis.
+
+Analyze data from the logs of a web service to answer questions such as "What is the most popular page?" and "When was the error rate high?" using advanced SQL queries.
+
+
 *This is project 3 of the [Udacity Full Stack Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004) course.*
 
 &nbsp;
